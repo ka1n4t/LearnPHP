@@ -1,0 +1,115 @@
+<html>
+<head>
+	<meta http-equiv="content-type" content="txt/html; charset=utf-8" />
+</head>
+<body>
+	{*这里是注释*}
+	<div>{$title}</div>
+	<div>{$content}</div>
+	<hr/>
+	
+	<div><b>使用Smarty接收请求参数</b></div>
+	<div>smarty.get.name={$smarty.get.name}</div>
+	<br>
+	<div><b>使用Smarty输出常量</b></div>
+	<div>smarty.const.Hello={$smarty.const.Hello}</div>
+	<br>
+	<div><b>使用Smarty输出时间戳</b></div>
+	<div>smarty.now={$smarty.now}</div>
+	<br>
+	<div><b>使用Smarty获得当前模板名称</b></div>
+	<div>smarty.template={$smarty.template}</div>
+	<br>
+	<div><b>使用Smarty获得当前模板路径</b></div>
+	<div>smarty.current_dir={$smarty.current_dir}</div>
+	<br>
+	<div><b>使用Smarty获得当前版本</b></div>
+	<div>smarty.version={$smarty.version}</div>
+	<hr/>
+	
+	{config_load file='site.conf' section=$hobby}
+	<div><b>使用配置文件(配置文件默认放在configs文件夹下)</b></div>
+	<div>{$smarty.config.CONFIG1}</div>
+	<div>{$smarty.config.CONFIG2}</div>
+	<div>{$smarty.config.CONFIG3}</div>
+	{config_load file='site.conf' section='section2'}
+	<div>{$smarty.config.CONFIG1}</div>
+	<div>{$smarty.config.CONFIG2}</div>
+	<div>{$smarty.config.CONFIG3}</div>
+	<hr/>
+	
+	<div><b>使用数组</b></div>
+	<div>索引数组:</div>
+	<div>{$names[0]}</div>
+	<div>{$names.1}</div>
+	<div>关联数组:</div>
+	<div>{$fullNames['LeBron']}</div>
+	<div>{$fullNames.Kobe}</div>
+	<div><b>foreach遍历数组</b></div>
+	<pre>
+	值变量
+	@iteration,是从1开始的序号
+	@index是从0开始
+	@first, 判断是否是数组的第一个元素
+	@total, 计算数组的元素个数
+	</pre>
+	{foreach $fullNames as $firstname => $lastname}
+		isFirst:{$lastname@first}
+		No.{$lastname@iteration} 
+		姓:{$lastname}
+		名:{$firstname}
+		</br>
+	{foreachelse}
+		数组为空！
+	{/foreach}
+	数组个数为{$lastname@total}
+	<hr/>
+	
+	<div><b>条件分支</b></div>
+	{if 1==1}
+		first if section
+	{elseif 2==2}
+		second if section
+	{else}
+		else section
+	{/if}
+	<hr/>
+	
+	<div><b>复选框</b></div>
+	{html_checkboxes name="hobby" options=$fullNames}
+	<div><b>下拉列表</b></div>
+	{html_options name="hobby" options=$fullNames multiple='multiple'}
+	<hr/>
+	
+	<div><b>将已有前端模板与Smarty结合</b></div>
+	<ul>
+		<li>复制模板文件到根目录</li>
+		<li>修改html中js,css,img等静态资源的相对路径</li>
+		<li>修改css中引入图片的相对路径</li>
+		<li>在入口文件中设置变量信息，使其在模板文件中显示</li>
+	</ul>
+	
+	
+	
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+</body>
+</html>
