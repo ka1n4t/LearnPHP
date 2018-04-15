@@ -1,0 +1,24 @@
+<html>
+<body>
+	第{$smarty.get.page}页
+	<hr>
+	{literal}
+	<div><b>局部不缓存</b></div>
+	<div>单个变量不缓存: {$title nocache}</div>
+	<div>单个变量不缓存: $smarty->assign(name, value, true)</div>
+	<div>块不缓存: {nocache}不缓存的内容{/nocache}</div>
+	{/literal}
+	a
+	<div>{$smarty.now nocache}</div>
+	<div>{$test1}</div>
+	<div>{$test2}</div>
+	<hr>
+	
+	<div><b>缓存集合</b></div>
+	<div>brand: {$smarty.get.brand}</div>
+	<div>price: {$smarty.get.price}</div>
+	<div>network: {$smarty.get.network}</div>
+	<div>size: {$smarty.get.size}</div>
+	
+</body>
+</html>

@@ -14,8 +14,8 @@
 	<div><b>使用Smarty输出常量</b></div>
 	<div>smarty.const.Hello={$smarty.const.Hello}</div>
 	<br>
-	<div><b>使用Smarty输出时间戳</b></div>
-	<div>smarty.now={$smarty.now}</div>
+	<div><b>使用Smarty输出时间戳(使用变量修饰器将其格式化)</b></div>
+	<div>smarty.now={$smarty.now|date_format:"%Y-%m-%d %H:%M:%S"}</div>
 	<br>
 	<div><b>使用Smarty获得当前模板名称</b></div>
 	<div>smarty.template={$smarty.template}</div>
@@ -88,9 +88,16 @@
 		<li>修改css中引入图片的相对路径</li>
 		<li>在入口文件中设置变量信息，使其在模板文件中显示</li>
 	</ul>
+	<hr/>
+	
+	<div><b>变量修饰器</b></div>
+	<div>初始：{$smarty.get.name}</div>
+	<div>小写：{$smarty.get.name|lower}</div>
+	<div>大写：{$smarty.get.name|upper}</div>
+	<hr/>
 	
 	
-	
+	<hr/>
 	<br/>
 	<br/>
 	<br/>
