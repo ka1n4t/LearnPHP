@@ -40,7 +40,7 @@ class mysql{
 	 */
 	function query($sql){
 		if(!($query = mysqli_query($this->con, $sql))){//使用mysql_query函数执行sql语句
-			$this->err($sql."<br />".mysqli_error());//mysql_error 报错
+			$this->err($sql."<br />".mysqli_error($this->con));//mysql_error 报错
 		}else{
 			return $query;
 		}
@@ -67,6 +67,31 @@ class mysql{
 		return $row;
 	}
 	
+	function counts($table) {
+		$sql = "select count(*) from $table";
+		$result = $this->query($sql);
+		if($result) {
+			$row = mysqli_fetch_row($result);
+			return $row[0];
+		} else {
+			return false;
+		}
+	}
+	
+	function getList($table, $where) {
+		if(empty($where)) {
+			$sql = "select * from $table";
+		} else {
+			$sql = "select * from $table where $where";
+		}
+		$result = $this->query($sql);
+		while($row = mysqli_fetch_assoc($result)) {
+			$rows[] = $row;
+		}
+		if(empty($rows)) return false;
+		return $rows;
+	}
+	
 	/**
 	*单条
 	*
@@ -85,7 +110,7 @@ class mysql{
 	*return array   返回指定行的指定字段的值
 	**/
 	function findResult($query, $row = 0, $filed = 0){
-		$rs = mysql_result($query,  $row, $filed);
+		$rs = mysqli_result($query,  $row, $filed);
 		return $rs;
 	}
 
@@ -99,7 +124,7 @@ class mysql{
 	function insert($table,$arr){
 		//$sql = "insert into 表名(多个字段) values(多个值)";
 		foreach($arr as $key=>$value){//foreach循环数组
-			$value = mysql_real_escape_string($value);
+			//$value = mysql_real_escape_string($value);
 			$keyArr[] = "`".$key."`";//把$arr数组当中的键名保存到$keyArr数组当中
 			$valueArr[] = "'".$value."'";//把$arr数组当中的键值保存到$valueArr当中，因为值多为字符串，而sql语句里面insert当中如果值是字符串的话要加单引号，所以这个地方要加上单引号
 		}
@@ -107,7 +132,7 @@ class mysql{
 		$values = implode(",",$valueArr);
 		$sql = "insert into ".$table."(".$keys.") values(".$values.")";//sql的插入语句  格式：insert into 表(多个字段)values(多个值)
 		$this->query($sql);//调用类自身的query(执行)方法执行这条sql语句  注：$this指代自身
-		return mysql_insert_id();
+		return mysqli_insert_id($this->con);
 	}
 
 	/**
@@ -120,7 +145,7 @@ class mysql{
 	function update($table,$arr,$where){
 		//update 表名 set 字段=字段值 where ……
 		foreach($arr as $key=>$value){
-			$value = mysql_real_escape_string($value);
+			//$value = mysql_real_escape_string($value);
 			$keyAndvalueArr[] = "`".$key."`='".$value."'";
 		}
 		$keyAndvalues = implode(",",$keyAndvalueArr);

@@ -9,6 +9,10 @@
 			self::$db->connect($config);
 		}
 		
+		public static function counts($table){
+			return self::$db->counts($table);
+		}
+		
 		public static function query($sql){
 			return self::$db->query($sql);
 		}
@@ -20,6 +24,10 @@
 		public static function findAll($sql){
 			$query = self::$db->query($sql);
 			return self::$db->findAll($query);
+		}
+		
+		public static function getList($table, $where = '') {
+			return self::$db->getList($table, $where);
 		}
 		
 		public static function findOne($sql){
