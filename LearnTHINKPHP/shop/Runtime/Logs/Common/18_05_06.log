@@ -1,0 +1,60 @@
+[ 2018-05-06T10:38:17+08:00 ] 127.0.0.1 /LAB/LearnTHINKPHP/shop/index.php/admin/goods/$smarty.const.ADMIN_IMG_URL%7D20121018-174034-97960.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000608s ]
+
+[ 2018-05-06T16:11:00+08:00 ] 127.0.0.1 /LAB/LearnTHINKPHP/shop/index.php/Admin/Index/ADMIN_IMG_URadmin_p.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000418s ]
+
+[ 2018-05-06T16:11:00+08:00 ] 127.0.0.1 /LAB/LearnTHINKPHP/shop/index.php/Admin/Index/ADMIN_IMG_URtitle_bg1.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000366s ]
+
+[ 2018-05-06T16:11:00+08:00 ] 127.0.0.1 /LAB/LearnTHINKPHP/shop/index.php/Admin/Index/ADMIN_IMG_URshadow_bg.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000455s ]
+
+[ 2018-05-06T16:11:00+08:00 ] 127.0.0.1 /LAB/LearnTHINKPHP/shop/index.php/Admin/Index/ADMIN_IMG_URtitle_bg2.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000382s ]
+
+[ 2018-05-06T16:11:01+08:00 ] 127.0.0.1 /LAB/LearnTHINKPHP/shop/index.php/Admin/Index/ADMIN_IMG_URheader_left.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000390s ]
+
+[ 2018-05-06T16:11:01+08:00 ] 127.0.0.1 /LAB/LearnTHINKPHP/shop/index.php/Admin/Index/ADMIN_IMG_URheader_right.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000348s ]
+
+[ 2018-05-06T16:11:01+08:00 ] 127.0.0.1 /LAB/LearnTHINKPHP/shop/index.php/Admin/Index/ADMIN_IMG_URheader_bg.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000462s ]
+
+[ 2018-05-06T16:11:01+08:00 ] 127.0.0.1 /LAB/LearnTHINKPHP/shop/index.php/Admin/Index/ADMIN_IMG_URmenu_icon.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000383s ]
+
+[ 2018-05-06T16:11:01+08:00 ] 127.0.0.1 /LAB/LearnTHINKPHP/shop/index.php/Admin/Index/ADMIN_IMG_URmenu_icon.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000359s ]
+
+[ 2018-05-06T16:11:01+08:00 ] 127.0.0.1 /LAB/LearnTHINKPHP/shop/index.php/Admin/Index/ADMIN_IMG_URmenu_bg.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000356s ]
+
+[ 2018-05-06T16:11:01+08:00 ] 127.0.0.1 /LAB/LearnTHINKPHP/shop/index.php/Admin/Index/ADMIN_IMG_URmenu_bt.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000688s ]
+
